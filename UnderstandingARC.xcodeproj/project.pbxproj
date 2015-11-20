@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C40BA411BF24FF600D0B39A /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C40BA401BF24FF600D0B39A /* View.xib */; };
 		4CAEB4531BEE6A88005D7066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEB4521BEE6A88005D7066 /* AppDelegate.swift */; };
 		4CAEB4551BEE6A88005D7066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEB4541BEE6A88005D7066 /* ViewController.swift */; };
 		4CAEB4581BEE6A88005D7066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEB4561BEE6A88005D7066 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C40BA401BF24FF600D0B39A /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		4CAEB44F1BEE6A88005D7066 /* UnderstandingARC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderstandingARC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAEB4521BEE6A88005D7066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CAEB4541BEE6A88005D7066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +64,11 @@
 				4CAEB4541BEE6A88005D7066 /* ViewController.swift */,
 				4CAEB4561BEE6A88005D7066 /* Main.storyboard */,
 				4CAEB4591BEE6A88005D7066 /* Assets.xcassets */,
-				4CAEB45B1BEE6A88005D7066 /* LaunchScreen.storyboard */,
 				4CAEB45E1BEE6A88005D7066 /* Info.plist */,
+				4CAEB45B1BEE6A88005D7066 /* LaunchScreen.storyboard */,
 				4CAEB4641BEE6AB9005D7066 /* Human.swift */,
 				4CAEB4661BEE717D005D7066 /* HumanArm.swift */,
+				4C40BA401BF24FF600D0B39A /* View.xib */,
 			);
 			path = UnderstandingARC;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C40BA411BF24FF600D0B39A /* View.xib in Resources */,
 				4CAEB45D1BEE6A88005D7066 /* LaunchScreen.storyboard in Resources */,
 				4CAEB45A1BEE6A88005D7066 /* Assets.xcassets in Resources */,
 				4CAEB4581BEE6A88005D7066 /* Main.storyboard in Resources */,
@@ -292,6 +296,7 @@
 				4CAEB4631BEE6A88005D7066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

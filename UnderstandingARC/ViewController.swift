@@ -11,15 +11,21 @@ import UIKit
 class ViewController: UIViewController {
 
     var person:Human?
+    weak var weakPerson:Human?
     
     @IBAction func createPerson(sender: UIButton) {
-        person = Human(name: "andesr")
+        person = Human(name: "anders")
+        weakPerson = person
     }
     
     @IBAction func removePersonRef(sender: UIButton) {
         person = nil
+        // No need to nil the weakPerson ref
     }
     
+    @IBAction func createWeakRefToHuman(sender: UIButton) {
+        weakPerson = Human(name: "weak anders")
+    }
     
     var benny:Human?
     @IBAction func createStrongReferenceCycle(sender: UIButton) {
@@ -42,6 +48,19 @@ class ViewController: UIViewController {
         // eventhoug the Human and HumanArm refer to eachother in 
         // a cyclic manner
         dennis = nil;
+    }
+    
+    
+    var erik:Human?
+    var fred:Human?
+    @IBAction func makeWekaReferencedObjectDisappear(sender: UIButton) {
+        // Create a strong reference to erik and fred
+        erik = Human(name: "erik")
+        fred = Human(name: "fred")
+        // Make erik a weak friend of fred
+        fred?.weakFriend = erik
+        print("\(fred)'s weak friend is \(erik)")
+        
     }
 }
 

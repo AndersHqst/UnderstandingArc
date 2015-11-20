@@ -9,17 +9,30 @@
 import UIKit
 
 class Human: NSObject {
+    
     var friend:Human?
+    
     // weak references, i.e. reference to things that may have no value
     // must be optional
     weak var weakFriend:Human?
+    
+    // Strong referen to his arm
+    // if the human is alive, and has a no-nil arm, it is alive
     var leftArm:HumanArm?
-    let name: String
+    
+    // Name of the human to make console output more readable
+    var name: String
+    
     init(name: String) {
         self.name = name
         print("\(name) is being initialized")
     }
+    
     deinit {
         print("\(name) is being deinitialized")
+    }
+    
+    override var description: String {
+        return name
     }
 }
