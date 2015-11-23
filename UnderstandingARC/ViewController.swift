@@ -50,17 +50,16 @@ class ViewController: UIViewController {
         dennis = nil;
     }
     
-    
     var erik:Human?
-    var fred:Human?
-    @IBAction func makeWekaReferencedObjectDisappear(sender: UIButton) {
-        // Create a strong reference to erik and fred
+    var eriksArm:HumanArm?
+    @IBAction func demoUnownedRefernces2(sender: UIButton) {
         erik = Human(name: "erik")
-        fred = Human(name: "fred")
-        // Make erik a weak friend of fred
-        fred?.weakFriend = erik
-        print("\(fred)'s weak friend is \(erik)")
-        
+        eriksArm = HumanArm(human: erik!)
+        erik!.leftArm = eriksArm
+        // Kill erik -> it makes no sense that his arm should be alive...
+        erik = nil;
+        // Explode!
+        print(eriksArm!.human)
     }
 }
 

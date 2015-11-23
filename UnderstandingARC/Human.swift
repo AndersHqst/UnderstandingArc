@@ -12,10 +12,6 @@ class Human: NSObject {
     
     var friend:Human?
     
-    // weak references, i.e. reference to things that may have no value
-    // must be optional
-    weak var weakFriend:Human?
-    
     // Strong referen to his arm
     // if the human is alive, and has a no-nil arm, it is alive
     var leftArm:HumanArm?

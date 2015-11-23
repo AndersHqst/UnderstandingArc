@@ -12,7 +12,7 @@ class HumanArm: NSObject {
     
     // A HumanArm connot exist without a Human
     // But a Human can exist without an HumanArm
-    unowned let human:Human
+    unowned var human:Human
     
     let armName:String
     
