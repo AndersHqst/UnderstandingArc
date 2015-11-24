@@ -1,23 +1,15 @@
-//
-//  Person.swift
-//  UnderstandingARC
-//
-//  Created by Anders Høst Kjærgaard on 07/11/2015.
-//  Copyright © 2015 e-conomic International A/S. All rights reserved.
-//
-
-import UIKit
+import Foundation
 
 class Human: NSObject {
     
+    var name: String
+    
     var friend:Human?
     
-    // Strong referen to his arm
-    // if the human is alive, and has a no-nil arm, it is alive
-    var leftArm:HumanArm?
+    weak var weakFriend:Human?
     
-    // Name of the human to make console output more readable
-    var name: String
+    // Strong reference to his arm
+    var leftArm:HumanArm?
     
     init(name: String) {
         self.name = name

@@ -1,28 +1,18 @@
-//
-//  ViewController.swift
-//  UnderstandingARC
-//
-//  Created by Anders Høst Kjærgaard on 07/11/2015.
-//  Copyright © 2015 e-conomic International A/S. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
     var person:Human?
-    weak var weakPerson:Human?
     
     @IBAction func createPerson(sender: UIButton) {
         person = Human(name: "anders")
-        weakPerson = person
     }
     
     @IBAction func removePersonRef(sender: UIButton) {
         person = nil
-        // No need to nil the weakPerson ref
     }
-    
+
+    weak var weakPerson:Human?
     @IBAction func createWeakRefToHuman(sender: UIButton) {
         weakPerson = Human(name: "weak anders")
     }
@@ -37,6 +27,16 @@ class ViewController: UIViewController {
         // and see that the two Human objects are not deinitialized
         // we are taking up memory that we do not use :(
         benny = nil
+    }
+    
+    var strongBenny:Human?
+    @IBAction func demoWeakFriendReference(sender: UIButton) {
+        strongBenny = Human(name: "strongBenny")
+        let weakCarsten = Human(name: "weakCarsten")
+        strongBenny!.friend = weakCarsten
+        weakCarsten.weakFriend = strongBenny
+        print("nil reference to strongBenny")
+        strongBenny = nil
     }
     
     var dennis:Human?

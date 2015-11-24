@@ -25,16 +25,8 @@
                                     <action selector="createPerson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gf4-Qi-xNC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-aY-681">
-                                <rect key="frame" x="236" y="71" width="129" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Remove human ref"/>
-                                <connections>
-                                    <action selector="removePersonRef:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvq-2N-Lya"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRb-Rl-UJN">
-                                <rect key="frame" x="223" y="109" width="155" height="30"/>
+                                <rect key="frame" x="223" y="133" width="155" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Create reference cycle"/>
                                 <connections>
@@ -42,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTn-Yb-xSo">
-                                <rect key="frame" x="177" y="147" width="247" height="30"/>
+                                <rect key="frame" x="177" y="209" width="247" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Avoid reference cycle with unowned"/>
                                 <connections>
@@ -50,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhC-wa-Bdj">
-                                <rect key="frame" x="212" y="223" width="177" height="30"/>
+                                <rect key="frame" x="214" y="99" width="177" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Create weak ref to human"/>
                                 <connections>
@@ -58,29 +50,47 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEX-cF-RFu">
-                                <rect key="frame" x="193" y="261" width="214" height="30"/>
+                                <rect key="frame" x="193" y="247" width="214" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Unowned difference from weak"/>
                                 <connections>
                                     <action selector="demoUnownedRefernces2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kcb-rC-77n"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbo-Bu-JgT">
+                                <rect key="frame" x="193" y="171" width="219" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Avoid reference cycle with weak"/>
+                                <connections>
+                                    <action selector="demoWeakFriendReference:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3t-JD-YSU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-aY-681">
+                                <rect key="frame" x="236" y="66" width="129" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Remove human ref"/>
+                                <connections>
+                                    <action selector="removePersonRef:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvq-2N-Lya"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tv9-aY-681" firstAttribute="top" secondItem="QyC-fq-WAp" secondAttribute="bottom" constant="13" id="82i-If-iH4"/>
-                            <constraint firstItem="BEX-cF-RFu" firstAttribute="centerX" secondItem="uhC-wa-Bdj" secondAttribute="centerX" id="86Y-ZX-7rG"/>
-                            <constraint firstItem="iRb-Rl-UJN" firstAttribute="centerX" secondItem="tv9-aY-681" secondAttribute="centerX" id="9um-IM-16b"/>
-                            <constraint firstItem="iRb-Rl-UJN" firstAttribute="top" secondItem="tv9-aY-681" secondAttribute="bottom" constant="8" symbolic="YES" id="Yt4-gO-oV1"/>
-                            <constraint firstItem="QyC-fq-WAp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Zke-RQ-ldV"/>
-                            <constraint firstItem="QyC-fq-WAp" firstAttribute="centerX" secondItem="tv9-aY-681" secondAttribute="centerX" id="fp5-cZ-9ih"/>
-                            <constraint firstItem="DTn-Yb-xSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jUe-we-Pdm"/>
-                            <constraint firstItem="DTn-Yb-xSo" firstAttribute="centerX" secondItem="iRb-Rl-UJN" secondAttribute="centerX" id="kbD-76-AhR"/>
-                            <constraint firstItem="BEX-cF-RFu" firstAttribute="top" secondItem="uhC-wa-Bdj" secondAttribute="bottom" constant="8" symbolic="YES" id="lNL-Ba-V0n"/>
-                            <constraint firstItem="uhC-wa-Bdj" firstAttribute="centerX" secondItem="DTn-Yb-xSo" secondAttribute="centerX" id="nPy-85-xPX"/>
-                            <constraint firstItem="uhC-wa-Bdj" firstAttribute="top" secondItem="DTn-Yb-xSo" secondAttribute="bottom" constant="46" id="swM-jb-UZc"/>
-                            <constraint firstItem="DTn-Yb-xSo" firstAttribute="top" secondItem="iRb-Rl-UJN" secondAttribute="bottom" constant="8" symbolic="YES" id="uHt-Uc-kfZ"/>
+                            <constraint firstItem="uhC-wa-Bdj" firstAttribute="top" secondItem="tv9-aY-681" secondAttribute="bottom" constant="3" id="20K-W7-hO0"/>
+                            <constraint firstItem="Bbo-Bu-JgT" firstAttribute="leading" secondItem="BEX-cF-RFu" secondAttribute="leading" id="2Dn-y5-xD4"/>
+                            <constraint firstItem="iRb-Rl-UJN" firstAttribute="top" secondItem="uhC-wa-Bdj" secondAttribute="bottom" constant="4" id="4SD-jz-2Ul"/>
+                            <constraint firstItem="iRb-Rl-UJN" firstAttribute="centerX" secondItem="tv9-aY-681" secondAttribute="centerX" id="7Vx-hR-gzJ"/>
+                            <constraint firstItem="DTn-Yb-xSo" firstAttribute="centerX" secondItem="BEX-cF-RFu" secondAttribute="centerX" id="7kw-MB-X3J"/>
+                            <constraint firstItem="iRb-Rl-UJN" firstAttribute="centerX" secondItem="DTn-Yb-xSo" secondAttribute="centerX" id="BwS-Ef-Jda"/>
+                            <constraint firstItem="DTn-Yb-xSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DDW-1U-pQY"/>
+                            <constraint firstItem="Bbo-Bu-JgT" firstAttribute="top" secondItem="iRb-Rl-UJN" secondAttribute="bottom" constant="8" symbolic="YES" id="Doq-Ev-9ET"/>
+                            <constraint firstItem="QyC-fq-WAp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Fek-32-o7m"/>
+                            <constraint firstItem="DTn-Yb-xSo" firstAttribute="top" secondItem="Bbo-Bu-JgT" secondAttribute="bottom" constant="8" symbolic="YES" id="XzP-lH-xJF"/>
+                            <constraint firstItem="Bbo-Bu-JgT" firstAttribute="centerX" secondItem="uhC-wa-Bdj" secondAttribute="centerX" id="Y1U-Qa-jfN"/>
+                            <constraint firstItem="BEX-cF-RFu" firstAttribute="top" secondItem="DTn-Yb-xSo" secondAttribute="bottom" constant="8" symbolic="YES" id="cXQ-Lz-eRJ"/>
+                            <constraint firstItem="tv9-aY-681" firstAttribute="top" secondItem="QyC-fq-WAp" secondAttribute="bottom" constant="8" symbolic="YES" id="iIL-IB-5Ry"/>
+                            <constraint firstItem="QyC-fq-WAp" firstAttribute="centerX" secondItem="tv9-aY-681" secondAttribute="centerX" id="pRw-sM-CJr"/>
                         </constraints>
                     </view>
                 </viewController>

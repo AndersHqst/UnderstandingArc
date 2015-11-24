@@ -1,17 +1,8 @@
-//
-//  HumanArm.swift
-//  UnderstandingARC
-//
-//  Created by Anders Høst Kjærgaard on 07/11/2015.
-//  Copyright © 2015 e-conomic International A/S. All rights reserved.
-//
-
-import UIKit
-
-class HumanArm: NSObject {
+class HumanArm {
     
-    // A HumanArm connot exist without a Human
-    // But a Human can exist without an HumanArm
+    // A HumanArm connot exist without a Human.
+    // If so, if a living arm attempts to access the human
+    // we want to program to crash
     unowned var human:Human
     
     let armName:String
@@ -23,8 +14,6 @@ class HumanArm: NSObject {
     }
     
     deinit {
-        print("Deinitialized \(armName)")        
-        // Do not access the human here, as it may have been deallocated
-//        print("Crash? \(human)")
+        print("Deinitialized \(armName)")
     }
 }
